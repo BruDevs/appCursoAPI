@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-  <title>PlainAdmin Demo | Bootstrap 5 Admin Template</title>
+  <title>Admin | Gerenciamento de Curso</title>
 
   <!-- ========== All CSS files linkup ========= -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -67,10 +67,10 @@
           </a>
           <ul id="ddmenu_2" class="collapse dropdown-nav">
             <li>
-              <a href="{{route('cadcategoria')}}"> <span class="text h4">Cadastrar </span></a>
+              <a href="{{route('form-cadastro-categoria')}}"> <span class="text h4">Cadastrar </span></a>
             </li>
             <li>
-              <a href="blank-page.html"> <span class="text h4">Gerenciar </span></a>
+              <a href="{{route('manipula-categoria')}}"> <span class="text h4">Gerenciar </span></a>
             </li>
           </ul>
         </li>
@@ -90,7 +90,7 @@
           </a>
           <ul id="ddmenu_Curso" class="collapse dropdown-nav">
             <li>
-              <a href="settings.html"> <span class="text h4">Cadastrar </span> </a>
+              <a href="{{route('form-cadastro-curso')}}"> <span class="text h4">Cadastrar </span> </a>
             </li>
             <li>
               <a href="blank-page.html"> <span class="text h4">Gerenciar</span> </a>
@@ -113,10 +113,10 @@
           </a>
           <ul id="ddmenu_Aula" class="collapse dropdown-nav">
             <li>
-              <a href="settings.html"> <span class="text h4">Cadastrar</span> </a>
+              <a href="{{route('form-cadastro-aula')}}"> <span class="text h4">Cadastrar</span> </a>
             </li>
             <li>
-              <a href="blank-page.html"><span class="text h4"> Gerenciar</span> </a>
+              <a href="{{route('manipula-aula')}}"><span class="text h4"> Gerenciar</span> </a>
             </li>
           </ul>
         </li>
