@@ -93,7 +93,7 @@
               <a href="{{route('form-cadastro-curso')}}"> <span class="text h4">Cadastrar </span> </a>
             </li>
             <li>
-              <a href="blank-page.html"> <span class="text h4">Gerenciar</span> </a>
+              <a href="{{route('manipula-curso')}}"> <span class="text h4">Gerenciar</span> </a>
             </li>
           </ul>
         </li>
