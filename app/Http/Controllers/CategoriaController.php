@@ -36,4 +36,20 @@ class CategoriaController extends Controller
 
     }
 
+    public function DeletarCategoria(Categoria $resgistrosCategoria)
+    {
+        $resgistrosCategoria->delete();
+        return Redirect::route('index');
+    }
+
+    public function BuscarCategoriaNome(Request $request)
+    {
+        $registrosCategoria = Categoria::query();
+        $registrosCategoria->when($request->categoria,function($query, $valor){
+            $query->where('nomecategoria','like','%'.$valor.'%');
+        });
+        $registrosCategoria = $registrosCategoria->get();
+        return view('manipula_categoria',['registrosCategoria' => $registrosCategoria]);
+    }
+
 }

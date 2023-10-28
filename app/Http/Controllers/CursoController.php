@@ -35,4 +35,10 @@ class CursoController extends Controller
        return Redirect::route('index');
 
     }
+
+    public function DeletarCurso(Curso $resgistrosCurso)
+    {
+        $resgistrosCurso->delete();
+        return Redirect::route('index');
+    }
 }

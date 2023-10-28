@@ -23,7 +23,7 @@
                   <section class="container m-5">
 
                     <div class="container m-5">
-                      <form method="get" action="/editar-categoria">
+                      <form method="get" action="{{route('busca-categoria-nome')}}">
                         <div class="row">
 
                           <div class="col-6">
@@ -66,7 +66,7 @@
                           </td>
 
                           <td>
-                            <form method="Post" Action="{{route('alterar-categoria',$registrosCategorias->id)}}">
+                            <form method="Post" Action="{{route('deletar-categoria',$registrosCategorias->id)}}">
                               @method('delete')
                               @csrf
 
