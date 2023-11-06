@@ -53,4 +53,4 @@ Route::get('/manipulaaula',[AulaController::class,'mostrarManipulaAula'])->name(
 Route::get('/alterar-aula/{registrosAula}',[AulaController::class,'MostrarAlterarAula'])->name('alterar-aula');
 
 //rota para excluir aula
-Route::delete('/deletaraula/{resgistrosAula}',[AulaController::class,'DeletarAula'])->name('deletar-aula');
+Route::delete('/deletaraula/{registrosAula}',[AulaController::class,'DeletarAula'])->name('deletar-aula');
