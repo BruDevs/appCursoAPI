@@ -43,9 +43,10 @@
                     <table class="table">
                       <thead>
                         <tr>
+                          <th scope="col">Id do curso</th>
                           <th scope="col">Nome do curso</th>
                           <th scope="col">Carga horária</th>
-                          <th scope="col">Categoria</th>
+                          <th scope="col">Id Categoria</th>
                           <th scope="col">Valor do curso</th>
                           <th scope="col">Editar</th>
                           <th scope="col">Excluir</th>
@@ -57,6 +58,7 @@
                           <th scope="row">{{$registrosCursos->id}}</th>
                           <td>{{$registrosCursos->nomecurso}}</td>
                           <td>{{$registrosCursos->cargahoraria}}</td>
+                          <td>{{$registrosCursos->idcategoria}}</td>
                           <td>{{$registrosCursos->valor}}</td>
                           <td>
                             <a href="{{route('manipula-curso',$registrosCursos->id)}}">
