@@ -18,6 +18,12 @@ class AulaController extends Controller
         return view('manipula_aula',['registrosAula' => $registrosAula]);
     }
 
+    public function MostrarAlterarAula(Aula $registrosAula)
+    {
+        //$registrosCategoria = Categoria::;
+        return view('altera_aula',['registrosAula' => $registrosAula]);
+    }
+
     public function cadastroAula(Request $request){
         //verifica se existe algo na variável nomecategoria
        $registrosAula = $request->validate([
@@ -38,6 +44,23 @@ class AulaController extends Controller
         $registrosAula->delete();
         return Redirect::route('index');
     }
+   
+    public function AlterarBancoAula(Aula $registrosAula, Request $request)
+    {
 
+        $regiAula = $request->validate([
+            'tituloaula' => 'string|required',
+            'urlaula' => 'string|required'
+           ]);
+           
+           // Esta linha é que altera o registro no banco.
+           $registrosAula->fill($regiAula);
+          
+           $registrosAula->save();
+
+        
+        //alert("Dados alterados com sucesso!");
+        return Redirect::route('index');
+    }
 
 }

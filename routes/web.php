@@ -36,6 +36,7 @@ Route::get('/manipulacurso',[CursoController::class,'mostrarManipulaCurso'])->na
 
 //rotas para alterar curso
 Route::get('/alterar-curso/{registrosCurso}',[CursoController::class,'MostrarAlterarCurso'])->name('alterar-curso');
+Route::put('/alterarbancocurso/{registrosCurso}',[CursoController::class,'AlterarBancoCurso'])->name('alterar-banco-curso');
 
 //rota para excluir curso
 Route::delete('/deletarcurso/{resgistrosCurso}',[CursoController::class,'DeletarCurso'])->name('deletar-curso');
@@ -51,6 +52,7 @@ Route::get('/manipulaaula',[AulaController::class,'mostrarManipulaAula'])->name(
 
 //rotas para alterar aula
 Route::get('/alterar-aula/{registrosAula}',[AulaController::class,'MostrarAlterarAula'])->name('alterar-aula');
+Route::put('/alterarbancoaula/{registrosAula}',[AulaController::class,'AlterarBancoAula'])->name('alterar-banco-aula');
 
 //rota para excluir aula
 Route::delete('/deletaraula/{registrosAula}',[AulaController::class,'DeletarAula'])->name('deletar-aula');

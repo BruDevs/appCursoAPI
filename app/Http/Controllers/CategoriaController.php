@@ -66,9 +66,9 @@ class CategoriaController extends Controller
            ]);
            
            // Esta linha é que altera o registro no banco.
-           $registrosCategoria->id;
+           $registrosCategoria->fill($registrosCat);
           
-           $registrosCategoria::save($registrosCat);
+           $registrosCategoria->save();
 
         
         //alert("Dados alterados com sucesso!");
